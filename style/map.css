@@ -1,0 +1,148 @@
+.svg-image {
+	/* filter: drop-shadow(0 14px 25px #25252540); */
+	/* filter: drop-shadow(3px 16px 24px #252525); */
+	/* filter: drop-shadow(-3px 4px 0 #25252588)  */
+	position: relative;
+	z-index: 99;
+}
+
+.svg-image path {
+	/* don't give a standby theme */
+	/* we won't be set fill atribute */
+	/* fill: #fff; */
+    stroke-width: 2px;
+	stroke: #000;
+	transition: 600ms;
+}
+
+.svg-image path:hover {
+	transition: fill 0ms;
+	transition-timing-function: ease-in;
+	fill: #CAADE266;;
+	/* fill: #fff0; */
+}
+
+.svg-image path:active {
+	transition: 120ms;
+	fill: crimson;
+}
+
+.svg-container {
+	position: relative;
+	/* width: 400px; */
+	/* max-width: calc(100vh); */
+	justify-content: center;
+	padding: 40px;
+	display: flex;
+	flex: 1;
+}
+
+.svg-container svg {
+	/* width: 100%;  */
+	/* max-width: min(100vh, 40vw); */
+	/* min-width: 120px; */
+	/* width: min(100vh, 30vw) */
+	width: min(80vh, 40vw);
+	height: auto; 
+}
+
+img.splashart {
+	width: 100%;
+	min-height: 20px;
+	background-color: tan;
+	border: none;
+	border-radius: 30px;
+	height: auto;
+	/* max-width: 100%; */
+	/* border: 2px solid gold; */
+}
+
+.pinneds {
+	position: absolute;
+	z-index: 70;
+	top: 0;
+	left: 0;
+	padding: 8px;
+}
+
+.pinneds button {
+	padding: 4px;
+	border: 1px solid #000;
+	border-radius: 13px;
+	min-width: 30px;
+	min-height: 30px;
+}
+
+
+@keyframes current-blinking {
+	0% {
+		fill: #7f7;
+	}
+	50% {
+		fill: #77f;
+	}
+	100% {
+		fill: #7f7;
+	}
+}
+
+.current-blinking{
+	animation: current-blinking 900ms infinite linear;
+}
+
+@keyframes coin-anim {
+	0%{
+		rotate: y 0deg;
+	} 
+	50% {
+		rotate: y 180deg;
+	} 
+	100% {
+		rotate: y 360deg;
+	}
+}
+
+path.shrink-city {
+	transform: scale(0);
+	transform-origin: center;
+}
+svg {
+	transform-origin: center
+}
+path.unshrink-city {
+	transform: scale(1);
+	transform-origin: center;
+	transition-duration: 800ms;
+	transition-timing-function: cubic-bezier(0,1.36,.1,1.06)
+}
+
+.coin {
+	animation: coin-anim 1700ms infinite linear;
+	/* transform: translate(0, -50%); */
+	translate: -50% -100%;
+	width: 7%;
+}
+
+.azebg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	/* filter: blur(3px); */
+	box-sizing: border-box;
+}
+
+.bgfade {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(-90deg, #eee 6%, #eee0);
+	/* scale: 1.03; */
+	/* transform: scale(1.3, 1); */
+	/* transform-origin: right */
+	/* translate: 3% 0; */
+}

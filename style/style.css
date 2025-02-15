@@ -1,0 +1,40 @@
+
+@import url("./layss.css");
+@import url("./map.css");
+@import url("./view.css");
+@import url("./input.css");
+@import url("./startPage.css");
+@import url("./ride.css");
+@import url("./modal.css");
+@import url("./infocards.css");
+@import url("./niceys.css");
+@import url("./mobile.css");
+@import url("./detector.css");
+@import url("./scrollbars.css");
+@import url("./swaper.css");
+@import url("./loadwaiter.css");
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: poppins;
+}
+
+.r, [r] {
+	border: 2px solid red
+}
+
+html {
+	overscroll-behavior: contain;
+	/* overscroll-behavior: none; */
+	/* overscroll-behavior-y: none; */
+}
+
+
+html, body {
+  overscroll-behavior: contain;
+}
+
+.hidden {
+	display: none !important
+}

@@ -1,0 +1,5 @@
+.view {
+	width: min(100svw, 100%);
+	min-height: 100svh;
+	/* border: 2px solid red */
+}

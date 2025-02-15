@@ -1,0 +1,202 @@
+:root {
+	--content-bg: #eee
+}
+body, body > div {
+	background-color: #eee
+}
+.mobile {
+	display: none !important
+}
+
+.mapScale .map-popups {
+	opacity: 0 !important;
+	transition: 500ms;
+}
+
+ .map-popups {
+	 transition: 200ms;
+	 position: absolute;
+	 /* border: 4px solid red; */
+	 left: calc(50%);
+	 top: calc(50%);
+	 width: calc(100% - 80px);
+	 transform: translate(-50%, -50%);
+	 aspect-ratio: 1.26 / 1;
+	 pointer-events: none;
+ }
+ .sticky-top {
+	 background-color: #eee
+ }
+@media only screen and (max-width: 750px) {
+	.sticky-top {
+		background-color: #fff
+	}
+	.map-popups {
+		/*svg is already 80%*/
+		top: 0;
+		left: 10%;
+		transform: none;
+		width: 80%;
+		/* transform: scale(0.8); */
+		transform-origin: center;
+	}
+	body.immerse-map .map-popups {
+		/* top: 60px; */
+	}
+	body.immerse-content .map-popups {
+		top: 0;
+		scale: 50%;
+		transform-origin: top;
+	}
+	:root {
+		--content-bg: #fff
+	}
+	.mobile {
+		display: none !important
+	}
+	.pc {
+		display: none !important
+	}
+	/* .chip.selected { */
+	/* 	background-color: var(--chip-bg) */
+	/* } */
+	body.immerse-content {
+		/* background-color: tan; */
+	}
+	body.immerse-map {
+		/* background-color: green; */
+	}
+	.svg-container svg {
+		width: 80% /*make this smaller when drawer is scrolled to some point*/
+	}
+	body.immerse-map .svg-container svg {
+		width: 80%;
+		transition: 120ms;
+		/* transform: translateY(60px); */
+	}
+	body.immerse-map .svg-container {
+		/*moved from top bubu*/
+		/* padding-top: 60px  */
+		margin: 12% 5% 6% 5%
+	}
+	body.immerse-content .svg-container {
+		margin: 3%
+	}
+	body.immerse-content .svg-container svg {
+		width: 40%;
+		transition: all 200ms;
+		/* transform: translateY(0); */
+	}
+	.view.toprow.row.flips.flips {
+		flex-direction: column
+	}
+	.svg-container {
+		/* padding: 10px ; */
+		padding: 0; /*bubu*/
+		/* margin: 10px; */
+		margin: 0;
+		transition: 200ms
+	}
+	.mb-align-center {
+		 align-items: center;
+	}
+	.city-select-field {
+		width: unset !important
+	}
+	.contentside {
+		overflow: scroll !important;
+		border-radius: 30px 30px 0 0;
+	}
+	.city-select-field {
+		/* position: sticky; */
+	/* 	top: 20px;  */ /*same with height of handle*/
+		/* now itself will be in a sticky*/
+		padding-top: 0;
+	}
+	.view {
+		max-height: 100svh;
+	}
+	.drawer {
+		background-color: #fff;
+		border-radius: 30px 30px 0 0;
+		position: sticky;
+		top: 0;
+		flex: 1
+	}
+	.mpadded {
+		padding: 6px 13px
+	}
+	.drawer-glance {
+		min-height: 200px;
+		color: #222;
+	}
+	.drawer-padding {
+		/*risky to change since other stickies too are hard coded*/ 
+		min-height: 20px;
+		display: none; /*we don't need it since we have big drawer now */
+	}
+	.drawer-padding-bottom {
+		/* min-height: 100vh; */ /*to avoid scroll thingies*/
+		min-height: 50vh; /*to avoid scroll thingies*/
+		min-height: 20vh; /*to avoid scroll thingies*/
+		/* background-image: linear-gradient(to up, #222, #fff) */
+		background-image: linear-gradient(to top, #eee , #fff );
+	}
+
+	.drawer-handle-container {
+		background-color: #fff;
+		/* position: sticky; */
+		width: 100%;
+		top: 0;
+		bottom: calc(100% - 20px);
+		/* min-height: 50px; */
+		min-height: 20px;
+		/* border-radius: 13px 13px 0 0; */
+		border-radius: 30px 30px 0 0;
+	}
+	.drawer-handle {
+		background-color: #ddd;
+		border-radius: 9px;
+		min-height: 3px;
+		width: 60px;
+		transition: 620ms;
+	}
+	.sticky-drawer-item {
+		position: sticky;
+		top: 20px;
+	}
+	/* .drawer-handle-container:hover .drawer-handle, */
+	.drawer-handle-container:active .drawer-handle
+	{
+		transition: 120ms;
+		background-color: #bbb;
+		box-shadow: 0 0 0 1px #bbb;
+		width: 3px
+	}
+	.mapScale .contentside {
+		transform: translateY(90%);
+		transition: 500ms;
+	}
+	.contentside {
+		transition: 200ms;
+	}
+}
+
+@media only screen and (min-width: 750px) {
+	 .drawer {
+		 /* margin: auto; */
+		 padding: 70px;
+	 }
+	 .mapside {
+		 max-height: 100svh;
+		 position: sticky;
+		 top: 0;
+	 }
+	 .drawer-glance {
+		 display: none !important;
+	 }
+	 .city-select-field {
+		 background-color: #eee !important
+	 }
+ }
+

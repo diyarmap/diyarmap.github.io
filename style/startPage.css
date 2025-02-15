@@ -1,0 +1,193 @@
+.startPage {
+	padding-top: 20px;
+	position: relative;
+}
+
+.startPage *,
+.modeCard img {
+	user-select: none;
+
+	user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.startPage button.start-mode{
+	border-radius: 30px;
+	background-color: #ddd;
+	font-size: 19px;
+	margin: 10px;
+	border: none;
+	animation: start-mode-button-anim 300ms;
+	transition: 200ms;
+	transform: scale(1);
+	padding: 40px 60px;
+}
+
+@keyframes start-mode-button-hover-anim {
+	from {
+		box-shadow: 0 0 0 30px #7f7 inset;
+	}
+	to {
+		box-shadow: 0 0 0 0 #7f7 inset;
+	}
+}
+.startPage button.start-mode:hover
+{
+	transform: scale(1.2);
+	transition: 200ms, margin 500ms, transform 700ms;
+	position: relative;
+	background-color: #eee;
+	border: 3px solid #7f7;
+	margin: 30px
+}
+
+.startPage button.start-mode:focus,
+.startPage button.start-mode:hover
+{
+	animation: start-mode-button-hover-anim 200ms
+}
+
+.startPage button.start-mode:active {
+	margin: 60px;
+	scale: 1.2;
+	transition: 60ms;
+}
+
+.modeCard .modeCardImage {
+	transition: 500ms
+}
+.modeCard {
+	transition: 200ms
+}
+.modeContainer .modeCardImage {
+	scale: 1.08
+}
+.modeContainer:hover .modeCardImage {
+	/* transform: scale(1.2) */
+	scale: 1.2
+}
+/* .modeeContainer:hover .modeCard { */
+/* 	transform: scale(1.05) */
+/* } */
+.modeContainer{
+	cursor: pointer;
+	height: 100%;
+	/* min-height: 300px; */
+}
+.modeCard {
+	/* width: 400px; */
+	cursor: pointer;
+	/* height: 400px; */
+	overflow: hidden;
+	border-radius: 30px;
+	background-color: #ddd;
+	border:none;
+	margin: 10px;
+	min-width: 300px;
+	min-height: 300px;
+	position: relative;
+}
+
+span.modeName {
+	position: relative;
+	font-size: 38px;
+	font-weight: 500;
+	/* position: absolute; */
+	/* bottom: 20px; */
+	/* left: 50%; */
+	/* transform: translateX(-50%); */
+	/* background-color: #1111; */
+	color: #252525;
+	filter: drop-shadow(2px 3px 3px #25252525);
+	border-radius: 18px;
+	padding: 4px 13px;
+	margin-top: 13px;
+	margin-bottom: 23px;
+}
+span.modeText {
+	font-size: 24px; 
+	padding: 0 20px;
+	min-height: 0;
+	/* height: 100% */
+}
+
+
+.modeContainer .modeText {
+	overflow: hidden;
+	/* text-align: center; */
+}
+.modeContainer:hover .modeText {
+	overflow: auto;
+}
+@media only screen and (max-width: 750px) {
+	.modeContainer .modeText {
+		overflow: auto;
+		height: 130px;
+		font-size: 16px;
+		min-height: 0;
+		margin-bottom: 20px;
+	}
+	.startPage {
+		padding-top: 0;
+	}
+}
+
+.modeContainer:hover span.modeName {
+	background-color: #25252525;
+	/* color: #fff; */
+}
+
+.modeCardImage {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: salmon;
+}
+
+.modes {
+	overflow: auto;
+	/* border: 4px solid blue; */
+	/* padding: 50px; */
+}
+@media only screen and (min-width: 750px) {
+	.modes {
+		padding-left: 80px;
+		padding-right: 80px
+	}
+}
+
+.fullscreenButton {
+	position: fixed;
+	bottom: 30px;
+	right: 20px;
+	z-index: 30;
+	/* background: linear-gradient(115deg, #3cc5d7, #47d794); */
+	background: linear-gradient(115deg, #175fab, #3be06d);
+	/* background: linear-gradient(115deg, #fec163, #de4313); */
+	padding: 20px !important ;
+	box-shadow: 6px 8px 12px 0px rgba(255, 255, 255, 0.25) inset, -6px -15px 12px 0px rgba(99, 83, 19, 0.30) inset !important;
+	border-radius: 130px;
+	transition: 130ms;
+	cursor: pointer;
+	box-shadow: 6px 8px 0 #25252577
+}
+.fullscreenButton:hover {
+	padding: 50px;
+	/* box-shadow: 8px 10px 0 #25252577 */
+}
+.fullscreenButton:hover * {
+	transition: 300ms;
+	transform: scale(1.2)
+}
+
+/* we change path fill in svg itself. crazy. it's #eee */
+
+.isFullScreen .fullscreenButton { 
+	display: none
+} 
